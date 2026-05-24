@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Swiggy OfficeOS is an AI-powered workplace food and pantry copilot for Indian teams."
+    />
+    <title>Swiggy OfficeOS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Swiggy OfficeOS home">
+        <span class="brand-mark">SO</span>
+        <span>Swiggy OfficeOS</span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#workflows">Workflows</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#roadmap">Roadmap</a>
+        <a class="nav-action" href="https://github.com/abhisheksinghtomarDev/swiggy-officeos">
+          GitHub
+        </a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Workplace food and pantry automation</p>
+          <h1>AI copilot for office meals, pantry restocking, and team ordering.</h1>
+          <p class="hero-text">
+            Swiggy OfficeOS helps Indian teams coordinate recurring food and pantry workflows through
+            Slack, Microsoft Teams, Swiggy Food, and Swiggy Instamart MCP.
+          </p>
+          <div class="hero-badges">
+            <span class="badge">Slack + Microsoft Teams</span>
+            <span class="badge">Swiggy Food + Instamart</span>
+          </div>
+          <p class="hero-support">
+            Designed for office admins, HR, and engineering teams to automate everyday food and pantry
+            work with clear approvals, audit trails, and Swiggy-backed workflows.
+          </p>
+          <p class="hero-strip">
+            Built as an office operations layer on top of Swiggy commerce — practical, team-safe, and focused on repeated workplace workflows.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#workflows">View workflows</a>
+            <a class="button secondary" href="APPLICATION_TEXT.md">Application text</a>
+          </div>
+        </div>
+
+        <aside class="hero-aside">
+          <div class="hero-panel-badge">Office collaboration workflow</div>
+          <div class="workflow-panel" aria-label="Example workplace workflow">
+            <div class="panel-topline">
+              <span>Slack request</span>
+              <span class="status">Draft MVP</span>
+            </div>
+            <div class="message user-message">
+              Order dinner for the backend team tonight under Rs 350 per person.
+            </div>
+            <div class="message assistant-message">
+              I can prepare a team meal plan, check preferences, apply the budget, and ask the office
+              admin for approval before final ordering.
+            </div>
+            <div class="summary-grid">
+              <div>
+                <span class="metric">12</span>
+                <span class="label">Team members</span>
+              </div>
+              <div>
+                <span class="metric">Rs 350</span>
+                <span class="label">Per-person cap</span>
+              </div>
+              <div>
+                <span class="metric">2</span>
+                <span class="label">MCP servers</span>
+              </div>
+            </div>
+          </div>
+          <p class="hero-panel-footnote">
+            OfficeOS keeps approvals visible, budget-safe, and aligned with your workplace ordering policies.
+          </p>
+        </aside>
+      </section>
+
+      <section class="section" id="workflows">
+        <div class="section-heading">
+          <p class="eyebrow">MVP focus</p>
+          <h2>Useful workflows first, AI second.</h2>
+          <p>
+            The first build is intentionally practical. The AI layer exists to reduce coordination
+            work, collect context, and route approved actions through Swiggy MCP.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <span class="card-number">01</span>
+            <h3>Deployment-night meals</h3>
+            <p>
+              Help engineering teams plan late-night meals with budget rules, team preferences, and
+              admin approval before checkout.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="card-number">02</span>
+            <h3>Pantry restocking</h3>
+            <p>
+              Use Instamart workflows to suggest recurring pantry baskets for snacks, beverages,
+              essentials, and office supplies.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="card-number">03</span>
+            <h3>Budget-aware ordering</h3>
+            <p>
+              Keep ordering aligned with workplace budgets, approval rules, and basic audit history.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="split-section" id="architecture">
+        <div>
+          <p class="eyebrow">Architecture</p>
+          <h2>Event-driven backend for workplace commerce workflows.</h2>
+          <p>
+            The planned stack uses .NET 9 Web API, Angular, PostgreSQL, Redis, RabbitMQ, and SignalR.
+            Slack and Teams events trigger structured workflows that can call Swiggy Food and
+            Instamart MCP tools after the right checks.
+          </p>
+        </div>
+
+        <div class="architecture-list">
+          <div>
+            <strong>Agent workflow layer</strong>
+            <span>Interprets requests and prepares structured order or pantry plans.</span>
+          </div>
+          <div>
+            <strong>Approval service</strong>
+            <span>Requires admin confirmation for sensitive or budgeted workplace actions.</span>
+          </div>
+          <div>
+            <strong>Audit and monitoring</strong>
+            <span>Tracks workflow history, approvals, errors, and integration events.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section roadmap" id="roadmap">
+        <div class="section-heading">
+          <p class="eyebrow">Roadmap</p>
+          <h2>Built in small, reviewable steps.</h2>
+        </div>
+        <div class="timeline">
+          <div>
+            <span>Phase 1</span>
+            <strong>Slack MVP</strong>
+            <p>Deployment-night ordering, pantry refill suggestions, admin approval, and audit log.</p>
+          </div>
+          <div>
+            <span>Phase 2</span>
+            <strong>Pilot readiness</strong>
+            <p>Teams support, recurring templates, budget policies, and real-time dashboard updates.</p>
+          </div>
+          <div>
+            <span>Phase 3</span>
+            <strong>Workplace scale</strong>
+            <p>Multi-office controls, usage reporting, enterprise policies, and stronger monitoring.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Early MVP concept by Abhishek Singh Tomar. Built to explore safe, useful workplace workflows
+        with Swiggy MCP.
+      </p>
+    </footer>
+  </body>
+</html>
